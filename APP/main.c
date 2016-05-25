@@ -12,8 +12,8 @@ static USHORT   usRegInputBuf[REG_INPUT_NREGS];
 int
 main( void )
 {
-    eStatus = eMBInit( MB_RTU, 0x01, 0, 9600, MB_PAR_NONE );
-    eStatus = eMBEnable(  );
+    eMBInit( MB_RTU, 0x01, 0, 9600, MB_PAR_NONE );
+    eMBEnable(  );
 
     for( ;; )
     {

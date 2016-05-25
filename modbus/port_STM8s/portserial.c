@@ -19,6 +19,8 @@
  * File: $Id: portserial.c,v 1.1 2006/08/22 21:35:13 wolti Exp $
  */
 
+#include "stm8s.h"
+
 #include "port.h"
 
 /* ----------------------- Modbus includes ----------------------------------*/

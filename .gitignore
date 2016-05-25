@@ -15,5 +15,6 @@ tmp/
 tags
 
 IAR/Debug/Obj/*
+IAR/Debug/Exe/*
 IAR/settings/*
 IAR/STM8S-freemodbus.dep
