@@ -22,14 +22,16 @@
 #ifndef _PORT_H
 #define _PORT_H
 
+#include "stm8s.h"
+
 #include <assert.h>
 
 #define	INLINE                      inline
 #define PR_BEGIN_EXTERN_C           extern "C" {
 #define	PR_END_EXTERN_C             }
 
-#define ENTER_CRITICAL_SECTION( )   
-#define EXIT_CRITICAL_SECTION( )    
+#define ENTER_CRITICAL_SECTION( )   disableInterrupts()
+#define EXIT_CRITICAL_SECTION( )    enableInterrupts()
 
 typedef char    BOOL;
 

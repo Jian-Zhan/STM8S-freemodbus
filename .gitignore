@@ -16,5 +16,13 @@ tags
 
 IAR/Debug/Obj/*
 IAR/Debug/Exe/*
+IAR/Debug/List/*
+
+IAR/Release/Obj/*
+IAR/Release/Exe/*
+IAR/Release/List/*
+
 IAR/settings/*
 IAR/STM8S-freemodbus.dep
+
+
