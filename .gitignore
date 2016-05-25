@@ -14,3 +14,6 @@ tmp/
 .*.swp
 tags
 
+IAR/Debug/Obj/*
+IAR/settings/*
+IAR/STM8S-freemodbus.dep
