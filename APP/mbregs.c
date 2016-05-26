@@ -8,11 +8,12 @@
 /* number of regs */
 #define REG_HOLDING_NREGS 2
 /* content of the holding regs */
-uint16_t usRegHoldingBuf[REG_HOLDING_NREGS] = {
+uint16_t usRegHoldingBuf[REG_HOLDING_NREGS]@"reg_eeprom" = {
 	0x147b,
 	0x3f8e,
 };
 
+    
 /* holding input address */
 #define REG_INPUT_START 0x0000
 /* number of regs */
@@ -50,8 +51,11 @@ eMBRegHoldingCB( UCHAR * pucRegBuffer, USHORT usAddress, USHORT usNRegs, eMBRegi
             case MB_REG_WRITE:
                 while (usNRegs > 0)
                 {
+                    FLASH_WaitForLastOperation(FLASH_MEMTYPE_DATA);
                     usRegHoldingBuf[iRegIndex] = *pucRegBuffer++ << 8;
+                    FLASH_WaitForLastOperation(FLASH_MEMTYPE_DATA);
                     usRegHoldingBuf[iRegIndex] |= *pucRegBuffer++;
+                    FLASH_WaitForLastOperation(FLASH_MEMTYPE_DATA);
                     iRegIndex ++;
                     usNRegs --;
                 }

@@ -11,6 +11,11 @@ main( void )
   /* Clock configuration -----------------------------------------*/
   CLK_HSIPrescalerConfig(CLK_PRESCALER_HSIDIV1);  
   
+  /* Define FLASH programming time */
+  FLASH_SetProgrammingTime(FLASH_PROGRAMTIME_STANDARD);
+  /* Unlock Data memory */
+  FLASH_Unlock(FLASH_MEMTYPE_DATA);
+    
   eMBInit( MB_RTU, 0x01, 0, 9600, MB_PAR_NONE );
   eMBEnable(  );
   
