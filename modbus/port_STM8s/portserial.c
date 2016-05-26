@@ -34,11 +34,14 @@ vMBPortSerialEnable( BOOL xRxEnable, BOOL xTxEnable )
     /* If xRXEnable enable serial receive interrupts. If xTxENable enable
      * transmitter empty interrupts.
      */
-
+    volatile int i;
+    
     ENTER_CRITICAL_SECTION(  );
     
     if( xRxEnable ) {
         UART1_ITConfig(UART1_IT_RXNE_OR, ENABLE);
+        // A short delay to make sure data have been sent by RS485 chip
+        for (i = 0; i < 2000; i++);
         GPIO_WriteLow(GPIOD, GPIO_PIN_4);
     }
     else {

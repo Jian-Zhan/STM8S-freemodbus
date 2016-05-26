@@ -88,7 +88,7 @@ PR_BEGIN_EXTERN_C
  * the sum of all enabled functions in this file and custom function
  * handlers. If set to small adding more functions will fail.
  */
-#define MB_FUNC_HANDLERS_MAX                    ( 2 )
+#define MB_FUNC_HANDLERS_MAX                    ( 3 )
 
 /*! \brief Number of bytes which should be allocated for the <em>Report Slave ID
  *    </em>command.
@@ -104,7 +104,7 @@ PR_BEGIN_EXTERN_C
 #define MB_FUNC_OTHER_REP_SLAVEID_ENABLED       (  0 )
 
 /*! \brief If the <em>Read Input Registers</em> function should be enabled. */
-#define MB_FUNC_READ_INPUT_ENABLED              (  0 )
+#define MB_FUNC_READ_INPUT_ENABLED              (  1 )
 
 /*! \brief If the <em>Read Holding Registers</em> function should be enabled. */
 #define MB_FUNC_READ_HOLDING_ENABLED            (  1 )
