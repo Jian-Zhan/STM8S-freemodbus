@@ -54,9 +54,9 @@ typedef enum
  */
 typedef enum
 {
-    MB_PAR_NONE,                /*!< No parity. */
-    MB_PAR_ODD,                 /*!< Odd parity. */
-    MB_PAR_EVEN                 /*!< Even parity. */
+    MB_PAR_NONE = 0x00,                /*!< No parity. */
+    MB_PAR_ODD  = 0x01,                /*!< Odd parity. */
+    MB_PAR_EVEN = 0x10,                /*!< Even parity. */
 } eMBParity;
 
 /* ----------------------- Supporting functions -----------------------------*/
